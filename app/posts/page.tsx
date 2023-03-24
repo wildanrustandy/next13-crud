@@ -1,5 +1,3 @@
 export default function PostList() {
-  return (
-    <div>PostList</div>
-  )
+  return <div>Post List</div>;
 }

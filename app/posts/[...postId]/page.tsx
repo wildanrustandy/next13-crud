@@ -1,6 +1,3 @@
-export default function PostDetil({params} : {params: {postId: string}}) {
-  return (
-    console.log(params),
-    <div>Post {params.postId[0]}</div>
-  )
+export default function PostDetail({ params }: { params: { postId: string } }) {
+  return <div>Post {params.postId[0]}</div>;
 }
