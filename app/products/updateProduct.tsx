@@ -6,11 +6,13 @@ import { useRouter } from "next/navigation";
 type Product = {
   id: number;
   title: string;
+  sku: string;
   price: number;
 };
 
 export default function UpdateProduct(product: Product) {
   const [title, setTitle] = useState(product.title);
+  const [sku, setSku] = useState(product.sku);
   const [price, setPrice] = useState(product.price);
   const [modal, setModal] = useState(false);
   const [isMutating, setIsMutating] = useState(false);
@@ -29,6 +31,7 @@ export default function UpdateProduct(product: Product) {
       },
       body: JSON.stringify({
         title: title,
+        sku: sku,
         price: price,
       }),
     });
@@ -66,6 +69,16 @@ export default function UpdateProduct(product: Product) {
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
+                className="input w-full input-bordered"
+                placeholder="Product Name"
+              />
+            </div>
+            <div className="form-control">
+              <label className="label font-bold">SKU</label>
+              <input
+                type="text"
+                value={sku}
+                onChange={(e) => setSku(e.target.value)}
                 className="input w-full input-bordered"
                 placeholder="Product Name"
               />

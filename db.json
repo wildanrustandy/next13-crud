@@ -3,22 +3,38 @@
     {
       "id": 1,
       "title": "Product 1",
+      "sku": "PROD1",
       "price": 1000
     },
     {
       "id": 2,
       "title": "Product 2",
+      "sku": "PROD2",
       "price": 2000
     },
     {
       "title": "Product 3",
+      "sku": "PROD3",
       "price": 3000,
       "id": 5
     },
     {
       "title": "Product 4",
+      "sku": "PROD4",
       "price": 4000,
       "id": 6
+    },
+    {
+      "title": "Product 5",
+      "sku": "PROD5",
+      "price": 5500,
+      "id": 7
+    },
+    {
+      "title": "Product 6",
+      "sku": "PROD6",
+      "price": "6000",
+      "id": 8
     }
   ]
 }

@@ -9,6 +9,7 @@ export const metadata = {
 type Product = {
   id: number;
   title: string;
+  sku: string;
   price: number;
 };
 
@@ -31,6 +32,7 @@ export default async function ProductList() {
           <tr>
             <th>#</th>
             <th>Product Name</th>
+            <th>SKU</th>
             <th>Price</th>
             <th>Actions</th>
           </tr>
@@ -40,12 +42,12 @@ export default async function ProductList() {
             <tr key={product.id}>
               <td>{index + 1}</td>
               <td>{product.title}</td>
+              <td>{product.sku}</td>
               <td>{product.price}</td>
               <td className="flex">
                 <div className="mr-1">
                   <UpdateProduct {...product} />
                 </div>
-
                 <DeleteProduct {...product} />
               </td>
             </tr>
